@@ -25,7 +25,7 @@ export default class Cards extends Component {
       
       this.setState({ respObj: '' });
       var component = this;
-      let baseUrl = "/playing_cards/distribute-cards.php";
+      let baseUrl = "/distribute-cards.php";
 
       axios.post(baseUrl,this.state.total_player)
       .then(res => {
@@ -50,8 +50,8 @@ export default class Cards extends Component {
     var distributedCards = (this.state.total_player>0) ? this.state.respObj : '';
     return (
       <div className="row">
-        <h2>52-cards deck is ready to distribute</h2>
-        <p>Enter total no. of player and submit to check card distribution details</p>
+        <h2>Let's distribute the cards</h2>
+        <p>Please enter no. of players among which card need to be distributed and Click Submit</p>
         <div className="container">
           <div className="row">
             <div className="col-25">
